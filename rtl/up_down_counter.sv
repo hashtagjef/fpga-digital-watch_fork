@@ -10,13 +10,13 @@ module up_down_counter #(
 
   localparam logic [WIDTH - 1:0] Max = WIDTH'(MAX);
   initial count = '0;
-  logic next_count = 0;
+  logic [WIDTH - 1:0] next_count;
 
   always_ff @(posedge clk) if (enable) count <= next_count;
 
   always_comb begin
-    if (count < Max) assign next_count = count + WIDTH'(1);
-    else assign next_count = '0;
+    if(up) next_count = (count < Max) ? count + WIDTH'(1) : '0;
+    else   next_count = (count > 0)   ? count - WIDTH'(1) : Max;
   end
 
 endmodule;
