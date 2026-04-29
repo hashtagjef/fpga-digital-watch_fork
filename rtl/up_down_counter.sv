@@ -15,8 +15,7 @@ module up_down_counter #(
   always_ff @(posedge clk) if (enable) count <= next_count;
 
   always_comb begin
-    if(up) next_count = (count < Max) ? count + WIDTH'(1) : '0;
-    else   next_count = (count > 0)   ? count - WIDTH'(1) : Max;
+    if (up) next_count = (count < Max) ? count + WIDTH'(1) : '0;
+    else next_count = (count > 0) ? count - WIDTH'(1) : Max;
   end
-
-endmodule;
+endmodule
