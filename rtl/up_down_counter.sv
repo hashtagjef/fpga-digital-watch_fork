@@ -1,5 +1,18 @@
 `timescale 1ns / 1ps
 
+// Up down counter
+//
+// Parameters:
+//   MAX   - The largest value we want the counter to reach
+//   WIDTH - The required width we require for our counter to hold MAX
+//
+// Ports:
+//   clk    - Our clock
+//   enable - when high, the counter counts
+//   up     - when high, the counter counts up, else it counts down
+//   count  - The count the counter is on
+
+
 module up_down_counter #(
     parameter int MAX   = 2,
     parameter int WIDTH = 2
