@@ -54,7 +54,4 @@ module hms_counter #(
     minute_rollover = (minutes == MaxMinutes && second_rollover) ? 1 : 0;
   end
 
-
-
-
 endmodule
