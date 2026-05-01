@@ -1,3 +1,23 @@
+// Hours minutes seconds counter
+//
+// Parameters:
+//  N_HOURS   - Number of hours in a day
+//  N_MINUTES - Number of minutes in an hour
+//  N_SECONDS - Number of seconds in a minute
+//
+//  W_HOURS   - Required width to store max hours
+//  W_MINUTES - Required width to store max minutes
+//  W_SECONDS - Required width to store max seconds 
+//
+// Ports:
+//  clk       - Clock
+//  enable    - when high, the clock counts the time
+//  hours     - the hour count
+//  minutes   - the minute count
+//  seconds   - the second count
+
+
+
 `timescale 1ns / 1ps
 
 module hms_counter #(
