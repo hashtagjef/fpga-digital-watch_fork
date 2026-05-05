@@ -7,7 +7,7 @@
 //
 //  W_HOURS   - Required width to store max hours
 //  W_MINUTES - Required width to store max minutes
-//  W_SECONDS - Required width to store max seconds 
+//  W_SECONDS - Required width to store max seconds
 //
 // Ports:
 //  clk       - Clock

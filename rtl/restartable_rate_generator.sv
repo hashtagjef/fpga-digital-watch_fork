@@ -1,3 +1,15 @@
+// Restartable rate generator
+// Parameters:
+//  CYCLE_COUNT - The number of cycles our clock should go through after run is enabled
+//                before we make a tick
+// Ports:
+//  clk - Our clock
+//  run - Our rate generator only ticks when run is high
+//  tick - High when our clock has run CYCLE_COUNT-1 times after run was held down
+//         or CYCLE_COUNT times after tick was last high
+
+
+
 `timescale 1ns / 1ps
 module restartable_rate_generator #(
     parameter int CYCLE_COUNT = 2
