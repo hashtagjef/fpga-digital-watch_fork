@@ -27,7 +27,7 @@ module pwm_generator #(
 
   logic [ PeriodWidth - 1 : 0] count;
   logic [CompareWidth - 1 : 0] DutyCompare;
-  logic [  CompareWidth - 1:0] CountCompare;
+  logic [CompareWidth - 1 : 0] CountCompare;
 
   assign CountCompare = CompareWidth'(count);
   assign DutyCompare  = CompareWidth'(DUTY_CYCLES);
